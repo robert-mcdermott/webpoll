@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Vote - Admin</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🗳️ Web Voting App</h1>
+            <p class="subtitle">Create polls and gather votes in real-time</p>
+        </header>
+
+        <main class="main-content">
+            <div class="create-poll-section">
+                <h2>Create New Poll</h2>
+                <form id="create-poll-form" class="poll-form">
+                    <div class="form-group">
+                        <label for="poll-title">Poll Title</label>
+                        <input 
+                            type="text" 
+                            id="poll-title" 
+                            name="title" 
+                            placeholder="Enter poll title..." 
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="poll-description">Poll Description</label>
+                        <textarea 
+                            id="poll-description" 
+                            name="description" 
+                            placeholder="Enter poll description..." 
+                            rows="3"
+                            required
+                        ></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        Create Poll
+                    </button>
+                </form>
+
+                <div id="poll-created" class="poll-result" style="display: none;">
+                    <h3>🎉 Poll Created Successfully!</h3>
+                    <div class="poll-info">
+                        <p>Share this URL with participants:</p>
+                        <div class="url-container">
+                            <input type="text" id="poll-url" readonly>
+                            <button id="copy-url" class="btn btn-secondary">Copy</button>
+                        </div>
+                        <a id="poll-link" href="#" target="_blank" class="btn btn-outline">
+                            Open Poll Page
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>How it works:</h3>
+                <ol>
+                    <li>Create a poll with a title and description</li>
+                    <li>Share the generated URL with participants</li>
+                    <li>Participants can add items and vote</li>
+                    <li>View real-time results as votes come in</li>
+                </ol>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/admin.js"></script>
+</body>
+</html>

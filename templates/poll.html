@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ poll.title }} - Web Vote</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🗳️ {{ poll.title }}</h1>
+            <p class="subtitle">{{ poll.description }}</p>
+        </header>
+
+        <main class="main-content">
+            <div class="poll-section">
+                <div class="add-item-section">
+                    <h3>Add New Item</h3>
+                    <form id="add-item-form" class="item-form">
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="item-text" 
+                                name="text" 
+                                placeholder="Enter your item..." 
+                                required
+                            >
+                            <button type="submit" class="btn btn-primary">
+                                Add Item
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="voting-section">
+                    <h3>Vote for Your Favorite</h3>
+                    <div id="voting-items" class="voting-items">
+                        {% for item in poll.items %}
+                        <div class="vote-item" data-item-id="{{ item.id }}">
+                            <div class="item-content">
+                                <span class="item-text">{{ item.text }}</span>
+                                <span class="vote-count">{{ item.votes }} votes</span>
+                            </div>
+                            <button class="btn btn-vote" data-item-id="{{ item.id }}">
+                                Vote
+                            </button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <div id="no-items" class="no-items" {% if poll.items %}style="display: none;"{% endif %}>
+                        <p>No items yet. Be the first to add one!</p>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <h3>Live Results</h3>
+                    <div id="results-chart" class="chart-container">
+                        <canvas id="chart" width="400" height="200"></canvas>
+                    </div>
+                    <div id="total-votes" class="total-votes">
+                        Total votes: <span id="vote-count">{{ poll.votes_by_user|length }}</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        window.pollId = "{{ poll_id }}";
+        window.userId = localStorage.getItem('userId') || 
+            (localStorage.setItem('userId', 'user_' + Math.random().toString(36).substr(2, 9)), 
+             localStorage.getItem('userId'));
+    </script>
+    <script src="/static/js/poll.js"></script>
+</body>
+</html>
