@@ -8,7 +8,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #1B365D 0%, #00ABC8 100%);
+    background: #1B365D;
     min-height: 100vh;
 }
 
@@ -116,24 +116,25 @@ input[type="text"]:focus, textarea:focus {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #AA4AC4 0%, #FFB500 100%);
+    background: #AA4AC4;
     color: white;
-    box-shadow: 0 4px 15px rgba(170, 74, 196, 0.3);
+    box-shadow: 0 2px 8px rgba(170, 74, 196, 0.3);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 181, 0, 0.4);
+    background: #9C42B6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(170, 74, 196, 0.4);
 }
 
 .btn-secondary {
-    background: #FFB500;
+    background: #00ABC8;
     color: white;
     font-weight: 600;
 }
 
 .btn-secondary:hover {
-    background: #e6a300;
+    background: #0099B3;
     transform: translateY(-1px);
 }
 
@@ -157,7 +158,7 @@ input[type="text"]:focus, textarea:focus {
 }
 
 .btn-vote:hover {
-    background: #e6a300;
+    background: #E6A300;
     transform: translateY(-1px);
 }
 
@@ -177,23 +178,23 @@ input[type="text"]:focus, textarea:focus {
 
 /* Poll Result Styles */
 .poll-result {
-    background: linear-gradient(135deg, #f3e6ff 0%, #fff4cc 100%);
+    background: #00ABC8;
     padding: 30px;
     border-radius: 12px;
     margin-top: 30px;
     text-align: center;
-    border: 1px solid #AA4AC4;
+    border: 1px solid #00ABC8;
 }
 
 .poll-result h3 {
-    color: #AA4AC4;
+    color: white;
     margin: 0 0 20px 0;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .poll-info p {
-    color: #1B365D;
+    color: white;
     margin-bottom: 15px;
     font-weight: 500;
 }
@@ -209,7 +210,7 @@ input[type="text"]:focus, textarea:focus {
 
 .url-container input {
     background: white;
-    border: 2px solid #FFB500;
+    border: 2px solid #1B365D;
     color: #333;
     font-weight: 500;
 }
@@ -244,20 +245,48 @@ input[type="text"]:focus, textarea:focus {
     margin-bottom: 40px;
 }
 
-.add-item-section, .voting-section, .results-section {
+.add-item-section {
+    background: #FFB500;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #FFB500;
+}
+
+.voting-section {
     background: #f8f9fa;
     padding: 25px;
     border-radius: 12px;
     border: 1px solid #e9ecef;
 }
 
+.results-section {
+    background: #00ABC8;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #00ABC8;
+}
+
 .add-item-section {
     grid-column: 1 / -1;
 }
 
-.add-item-section h3, .voting-section h3, .results-section h3 {
+.add-item-section h3 {
+    margin: 0 0 20px 0;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.voting-section h3 {
     margin: 0 0 20px 0;
     color: #495057;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.results-section h3 {
+    margin: 0 0 20px 0;
+    color: white;
     font-size: 1.3rem;
     font-weight: 600;
 }
@@ -330,11 +359,11 @@ input[type="text"]:focus, textarea:focus {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #495057;
+    color: white;
 }
 
 .total-votes span {
-    color: #AA4AC4;
+    color: #FFB500;
     font-size: 1.3rem;
     font-weight: 600;
 }
