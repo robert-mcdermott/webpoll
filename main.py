@@ -8,7 +8,7 @@ import uuid
 import threading
 from datetime import datetime
 
-app = FastAPI(title="Web Voting App")
+app = FastAPI(title="Fred Hutch Voting App")
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")

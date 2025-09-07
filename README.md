@@ -1,8 +1,8 @@
-# 🗳️ Web Polling App
+# 🗳️ Fred Hutch Voting App
 
-A modern, real-time web polling application that allows administrators to create polls and participants to add items and vote. Built with FastAPI backend and vanilla JavaScript frontend.
+A modern, real-time web voting application designed for Fred Hutchinson Cancer Research Center. Allows administrators to create polls and participants to add items and vote. Built with FastAPI backend and vanilla JavaScript frontend.
 
-![Web Polling App](https://img.shields.io/badge/FastAPI-Web%20App-009688?style=for-the-badge&logo=fastapi)
+![Web Voting App](https://img.shields.io/badge/FastAPI-Web%20App-009688?style=for-the-badge&logo=fastapi)
 ![Python](https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge&logo=python)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript)
 ![HTML5](https://img.shields.io/badge/HTML5-CSS3-orange?style=for-the-badge&logo=html5)
@@ -72,8 +72,15 @@ The application follows a simple but effective architecture:
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3
 - **Templating**: Jinja2
 - **Storage**: In-memory with thread safety
-- **Styling**: Modern CSS with gradients and animations
+- **Styling**: Modern CSS with Fred Hutchinson brand colors
 - **Charts**: Custom HTML5 Canvas implementation
+
+### Brand Colors
+The application uses the official Fred Hutchinson Cancer Research Center color palette:
+- **Primary Navy**: `#1B365D` - Headers, primary buttons, chart bars
+- **Secondary Teal**: `#00ABC8` - Accents, hover states, chart bars  
+- **Purple**: `#AA4AC4` - Vote indicators, chart bars
+- **Yellow**: `#FFB500` - Organization branding, chart bars
 
 ## 🚀 Installation
 

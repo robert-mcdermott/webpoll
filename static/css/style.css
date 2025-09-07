@@ -8,7 +8,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1B365D 0%, #00ABC8 100%);
     min-height: 100vh;
 }
 
@@ -37,6 +37,16 @@ body {
     margin: 10px 0 0 0;
     opacity: 0.9;
     font-weight: 300;
+}
+
+.org-branding {
+    font-size: 0.9rem;
+    margin: 5px 0 0 0;
+    opacity: 0.8;
+    font-weight: 400;
+    color: #FFB500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Main Content */
@@ -85,9 +95,9 @@ input[type="text"], textarea {
 
 input[type="text"]:focus, textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #AA4AC4;
     background: white;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    box-shadow: 0 0 0 3px rgba(170, 74, 196, 0.15);
 }
 
 /* Button Styles */
@@ -106,56 +116,58 @@ input[type="text"]:focus, textarea:focus {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #AA4AC4 0%, #FFB500 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(170, 74, 196, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 181, 0, 0.4);
 }
 
 .btn-secondary {
-    background: #6c757d;
+    background: #FFB500;
     color: white;
+    font-weight: 600;
 }
 
 .btn-secondary:hover {
-    background: #5a6268;
+    background: #e6a300;
     transform: translateY(-1px);
 }
 
 .btn-outline {
     background: transparent;
-    color: #667eea;
-    border: 2px solid #667eea;
+    color: #AA4AC4;
+    border: 2px solid #AA4AC4;
 }
 
 .btn-outline:hover {
-    background: #667eea;
+    background: #AA4AC4;
     color: white;
 }
 
 .btn-vote {
-    background: #28a745;
+    background: #FFB500;
     color: white;
     padding: 8px 16px;
     font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .btn-vote:hover {
-    background: #218838;
+    background: #e6a300;
     transform: translateY(-1px);
 }
 
 .btn-voted {
-    background: #6f42c1;
+    background: #AA4AC4;
     cursor: default;
 }
 
 .btn-voted:hover {
-    background: #6f42c1;
+    background: #AA4AC4;
     transform: none;
 }
 
@@ -165,22 +177,23 @@ input[type="text"]:focus, textarea:focus {
 
 /* Poll Result Styles */
 .poll-result {
-    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    background: linear-gradient(135deg, #f3e6ff 0%, #fff4cc 100%);
     padding: 30px;
     border-radius: 12px;
     margin-top: 30px;
     text-align: center;
-    border: 1px solid #c3e6cb;
+    border: 1px solid #AA4AC4;
 }
 
 .poll-result h3 {
-    color: #155724;
+    color: #AA4AC4;
     margin: 0 0 20px 0;
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .poll-info p {
-    color: #155724;
+    color: #1B365D;
     margin-bottom: 15px;
     font-weight: 500;
 }
@@ -196,7 +209,7 @@ input[type="text"]:focus, textarea:focus {
 
 .url-container input {
     background: white;
-    border: 2px solid #28a745;
+    border: 2px solid #FFB500;
     color: #333;
     font-weight: 500;
 }
@@ -268,8 +281,8 @@ input[type="text"]:focus, textarea:focus {
 }
 
 .vote-item:hover {
-    border-color: #667eea;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #AA4AC4;
+    box-shadow: 0 4px 12px rgba(170, 74, 196, 0.2);
 }
 
 .item-content {
@@ -321,8 +334,9 @@ input[type="text"]:focus, textarea:focus {
 }
 
 .total-votes span {
-    color: #667eea;
+    color: #AA4AC4;
     font-size: 1.3rem;
+    font-weight: 600;
 }
 
 /* Responsive Design */

@@ -160,12 +160,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const barWidth = maxVotes > 0 ? (item.votes / maxVotes) * maxBarWidth : 0;
             
             // Draw bar
-            const colors = ['#4CAF50', '#2196F3', '#FF9800', '#F44336', '#9C27B0', '#00BCD4', '#FFEB3B', '#795548'];
-            ctx.fillStyle = colors[index % colors.length];
+            const colors = ['#1B365D', '#00ABC8', '#AA4AC4', '#FFB500', '#4CAF50', '#2196F3', '#FF9800', '#F44336'];
+            const barColor = colors[index % colors.length];
+            ctx.fillStyle = barColor;
             ctx.fillRect(50, y, barWidth, barHeight);
             
-            // Draw item text
-            ctx.fillStyle = '#333';
+            // Draw item text with contrasting color
+            // Use white text on dark colors, dark text on light colors
+            const darkColors = ['#1B365D', '#AA4AC4', '#4CAF50', '#2196F3', '#F44336'];
+            const textColor = darkColors.includes(barColor) ? '#FFFFFF' : '#333333';
+            ctx.fillStyle = textColor;
             ctx.font = '14px Arial';
             ctx.textAlign = 'left';
             const truncatedText = item.text.length > 20 ? item.text.substring(0, 20) + '...' : item.text;
