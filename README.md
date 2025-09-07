@@ -1,8 +1,8 @@
-# 🗳️ Web Voting App
+# 🗳️ Web Polling App
 
-A modern, real-time web voting application that allows administrators to create polls and participants to add items and vote. Built with FastAPI backend and vanilla JavaScript frontend.
+A modern, real-time web polling application that allows administrators to create polls and participants to add items and vote. Built with FastAPI backend and vanilla JavaScript frontend.
 
-![Web Voting App](https://img.shields.io/badge/FastAPI-Web%20App-009688?style=for-the-badge&logo=fastapi)
+![Web Polling App](https://img.shields.io/badge/FastAPI-Web%20App-009688?style=for-the-badge&logo=fastapi)
 ![Python](https://img.shields.io/badge/Python-3.12+-blue?style=for-the-badge&logo=python)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript)
 ![HTML5](https://img.shields.io/badge/HTML5-CSS3-orange?style=for-the-badge&logo=html5)
